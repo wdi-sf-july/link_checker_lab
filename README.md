@@ -190,3 +190,14 @@ describe "LinksWorker" do
 	end
 end
 ```
+
+## Bonus
+
+### Test Your Site Controller
+
+You might want to use what you learned abou testing this morning to test you controller, specifically `sites#create`.
+
+* Use create a `stub` for the `LinksWorker.perform_async(site.id)` in the controller.
+	*  i.e. `allow(LinksWorker).to receive(:perform_async)` or something like this	
+* Use a method expectation similar to mocking.
+	*  i.e. `expect(LinksWorker).to receive(:perform_async)`
